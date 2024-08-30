@@ -2,7 +2,7 @@
  * \file
  *
  * \brief Linked list implementation
- * This module provides support for a generic linked list implementation. 
+ * This project provides support for a generic linked list implementation. 
  * It supports the following functionalities:
  * - Creating a new linked list.
  * - Inserting a new node at any position in the linked list.

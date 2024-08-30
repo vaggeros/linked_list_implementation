@@ -2,20 +2,18 @@
 
 ### Introduction
 
-This project aims to provide a simple and efficient implementation for converting various data types into 3-byte (24-bit) integers.
- The current  supports the following functionalities:
+This project provides a linked list structure implementation
+
+ The current implementation supports the following functionalities:
 
 - **Creating a New Linked List**: Initialize a new, empty linked list.
 - **Inserting a Node**: Add a new node at any specified position within the linked list.
 - **Removing a Node**: Remove a node from any position in the linked list.
 - **Indexing into the Linked List**: Access and retrieve data from any position within the list.
 
-This project is ideal for those looking to understand the inner workings of linked lists or needing a customizable linked list for their applications.
-
 The project is organized as requested.
 
 ```
-
 ├── cli.sh (bash script to automate compile)
 ├── CMakeLists.txt
 ├── inc (Include directory)
@@ -27,7 +25,7 @@ The project is organized as requested.
 └── test (N/A)
 ```
 
-Although  the referred bonus implementation and corresponding tests are mentioned , they have not yet been implemented
+Although  the bonus implementation and corresponding tests are mentioned , they have not yet been implemented.
 
 ### How to: Build, compile & run
 

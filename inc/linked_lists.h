@@ -66,7 +66,7 @@ node* create_node(void* data);
  * Inserts a new node with the specified data into a linked list
  * at the given position.
  * If the position is 0, the new node is inserted at the beginning of the list.
- * Otherwise the new node is insersts at the provided position.
+ * Otherwise the new node is insersted at the provided position.
  * It also includes error handling: if the provided position is greater 
  * than the list size.
  * 
