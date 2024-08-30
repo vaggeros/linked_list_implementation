@@ -1,44 +1,51 @@
 #include <stdio.h>
-#include "../inc/main.h"
 #include "../inc/linked_lists.h"
+#include <stdio.h>
 
-int main(int argc, char const *argv[])
-{
-    linked_list* list = create_list();
-    linked_list* list2 = create_list();
-
-    int data1 = 10, data2 = 20, data3 = 30;
-    float data4 = 3.1, data5 = 2.2, data6 = 1.2;
+int main(int argc, char const *argv[]) {     
+    int i;
+    int data_1 = 10, data_2 = 20, data_3 = 30;
+    float data_4 = 3.1, data_5 = 2.2, data_6 = 1.2;
     
-    insert_node(list, &data1, 0);
-    insert_node(list, &data2, 1);
-    insert_node(list, &data3, 2);
+    //Create lists
+    linked_list* list_1 = create_list();
+    linked_list* list_2 = create_list();
 
-    insert_node(list2, &data4, 0);
-    insert_node(list2, &data5, 1);
-    insert_node(list2, &data6, 2);
+    printf("================================================== \n");
+    printf("Example Application for linked list implementation \n");
+    printf("================================================== \n");
 
-    // printf("Data at index 1: %d\n", *(int*)get_node_data(list, 1)); // Output: 20
-    // printf("Data at index 1: list 2 %d\n", *(int*)get_node_data(list2, 1)); // Output: 2
+    //Insert nodes
+    insert_node(list_1, &data_1, 0);
+    insert_node(list_1, &data_2, 1);
+    insert_node(list_1, &data_3, 2);
 
-    // delete_node(list, 1);
+    insert_node(list_2, &data_4, 0);
+    insert_node(list_2, &data_5, 1);
+    insert_node(list_2, &data_6, 2);
 
-    for (int i = 0; i < 3; i++) {
-        printf("Data at index %d after deletion: %d\n",i, *(int*)get_node_data(list, i)); // Output: 30
-    // Cleanup
+    //Retrieve data from the lists. 
+    printf("Retrieve data from the lists\n");
+    for (i = 0; i < 3; i++) {
+        printf("Data at index: %i list:1 %d\n", i, *(int*)get_node_data(list_1, i)); 
+        printf("Data at index: %i list:2 %0.2f\n", i, *(float*)get_node_data(list_2, i)); 
     }
 
-    for (int j = 0; j < 3; j++) {
-        printf("Data at index %d after deletion: %2f\n",j, *(float*)get_node_data(list2, j)); // Output: 30
-    // Cleanup
+    //Delete nodes 
+    delete_node(list_1, 0);
+    delete_node(list_2, 0);
+    
+    for (i = 0; i < 2; i++) {
+        printf("Data at index: %i after deletion list:1 %d\n", i, *(int*)get_node_data(list_1, i)); 
+        printf("Data at index: %i after deletion list:2 %0.2f\n", i, *(float*)get_node_data(list_2, i)); 
     }
     
-    while (list->size > 0) {
-        delete_node(list, 0);
-        delete_node(list2, 0);
+    while ((list_1->size > 0) && (list_2->size > 0))  {
+        delete_node(list_1, 0);
+        delete_node(list_2, 0);
 
     }
-    free(list);
-    free(list2);
+    free(list_1);
+    free(list_2);
     return 0;
 }
