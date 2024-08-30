@@ -4,6 +4,7 @@
 
 int main(int argc, char const *argv[]) {     
     int i;
+    //Dummy data for the lists
     int data_1 = 10, data_2 = 20, data_3 = 30;
     float data_4 = 3.1, data_5 = 2.2, data_6 = 1.2;
     
@@ -19,7 +20,6 @@ int main(int argc, char const *argv[]) {
     insert_node(list_1, &data_1, 0);
     insert_node(list_1, &data_2, 1);
     insert_node(list_1, &data_3, 2);
-
     insert_node(list_2, &data_4, 0);
     insert_node(list_2, &data_5, 1);
     insert_node(list_2, &data_6, 2);
@@ -31,10 +31,10 @@ int main(int argc, char const *argv[]) {
         printf("Data at index: %i list:2 %0.2f\n", i, *(float*)get_node_data(list_2, i)); 
     }
 
-    //Delete nodes 
+    //Delete nodes     
+    printf("Delete data from the lists\n");
     delete_node(list_1, 0);
     delete_node(list_2, 0);
-    
     for (i = 0; i < 2; i++) {
         printf("Data at index: %i after deletion list:1 %d\n", i, *(int*)get_node_data(list_1, i)); 
         printf("Data at index: %i after deletion list:2 %0.2f\n", i, *(float*)get_node_data(list_2, i)); 

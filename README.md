@@ -1,26 +1,28 @@
-# 24bits Integers Implementation
+# Linked List Implementation
 
 ### Introduction
 
 This project aims to provide a simple and efficient implementation for converting various data types into 3-byte (24-bit) integers.
- The current implementation supports conversions from the following data types:
+ The current  supports the following functionalities:
 
-- **`char` (1 byte):** Converts a single-byte character into a 3-byte representation.
-- **`short` (2 bytes):** Converts a 2-byte integer into a 3-byte representation.
-- **`long` (4 bytes):** Converts a 4-byte integer into a 3-byte representation.
-- **`long long` (8 bytes):** Converts an 8-byte integer into a 3-byte representation.
+- **Creating a New Linked List**: Initialize a new, empty linked list.
+- **Inserting a Node**: Add a new node at any specified position within the linked list.
+- **Removing a Node**: Remove a node from any position in the linked list.
+- **Indexing into the Linked List**: Access and retrieve data from any position within the list.
 
-The project is organized as requested..
+This project is ideal for those looking to understand the inner workings of linked lists or needing a customizable linked list for their applications.
+
+The project is organized as requested.
 
 ```
 
 ├── cli.sh (bash script to automate compile)
 ├── CMakeLists.txt
 ├── inc (Include directory)
-│   └── byte_conversion_utils.h
+│   └── linked_lists.h
 ├── README.md
 ├── src (Source directory)
-│   ├── byte_conversion_utils.c
+│   ├── linked_lists.c
 │   └── main.c
 └── test (N/A)
 ```
@@ -45,22 +47,23 @@ Use the following command to see more options :
 
 ### Example output 
 
-To verify the implementation, an example application was created that converts specific values to 3 bytes integers. The output logs represent the hex format of each data type before and after the conversion.
+To verify the implementation, an example application was created that initially creates two lists. It then inserts nodes with predefined data into these lists, retrieves, and prints their contents. Afterward, the application deletes the node at index 0 of both lists and prints the contents of the lists again to demonstrate the changes.
 
 ```
-========================================= 
-Example Application for 3 Bytes Conversion 
-========================================= 
-For char conversion Hex format: 0xff:
-3 bytes conversion Hex format : 0x0000FF
-For short conversion Hex format: 0x3039:
-3 bytes conversion Hex format : 0x003039
-For long conversion Hex format: 0x499602d2:
-3 bytes conversion Hex format : 0x000049
-3 bytes conversion Hex format : 0x9602D2
-For long long conversion Hex format: 0x7048860ddf79:
-3 bytes conversion Hex format : 0x704886
-3 bytes conversion Hex format : 0x0DDF79
-
+================================================== 
+Example Application for linked list implementation 
+================================================== 
+Retrieve data from the lists
+Data at index: 0 list:1 10
+Data at index: 0 list:2 3.10
+Data at index: 1 list:1 20
+Data at index: 1 list:2 2.20
+Data at index: 2 list:1 30
+Data at index: 2 list:2 1.20
+Delete data from the lists
+Data at index: 0 after deletion list:1 20
+Data at index: 0 after deletion list:2 2.20
+Data at index: 1 after deletion list:1 30
+Data at index: 1 after deletion list:2 1.20
 ```
 
